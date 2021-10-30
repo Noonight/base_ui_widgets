@@ -13,10 +13,10 @@ class UserMessage extends StatelessWidget {
         margin: const EdgeInsets.only(top: 5, bottom: 5),
         padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
-          color: Colors.indigo,
+          color: Colors.blueAccent,
           borderRadius: BorderRadius.circular(5),
         ),
-        child: Text(message),
+        child: Text(message, style: const TextStyle(color: Colors.white)),
       ),
     );
   }

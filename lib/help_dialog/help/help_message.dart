@@ -16,7 +16,7 @@ class HelpMessage extends StatelessWidget {
           color: Colors.grey,
           borderRadius: BorderRadius.circular(5),
         ),
-        child: Text(message),
+        child: Text(message, style: const TextStyle(color: Colors.white)),
       ),
     );
   }

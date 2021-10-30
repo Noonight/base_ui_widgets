@@ -18,6 +18,7 @@ class _HelpDialogState extends State<HelpDialog> {
   bool _isReceivingMoney = false;
   bool _isReceivingMoneyUserPressed = false;
   bool _isAggression = false;
+  bool _isStop = false;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +47,21 @@ class _HelpDialogState extends State<HelpDialog> {
               }),
             ]),
             helpMessage('Currently we have 0.000 rubles', _isReceivingMoney),
-            userMessage("Fck I'm out!", _isReceivingMoneyUserPressed)
+            userMessage("Fck I'm out!", _isReceivingMoneyUserPressed),
+            helpMessage('Thank you sir! \nWe really need your help. Can you stop it?', _isAggression),
+            userAction(_isAggression,
+                UserActions(actions: [
+                  UserActionModel('Stop', () {
+                    setState(() {
+                      _isStop = true;
+                      doWithRandomDelay(() {
+                        Navigator.pop(context);
+                      });
+                    });
+                  })
+                ])
+            ),
+            stopIt(_isStop)
           ],
         ),
       ),
@@ -60,6 +75,18 @@ class _HelpDialogState extends State<HelpDialog> {
       });
     });
   }
+
+  Widget stopIt(bool showIf) => Container(
+    child: showIf 
+        ? const Image(image: AssetImage('assets/images/PepegaWhyCry.jpeg'))
+        : null
+  );  
+
+  Widget userAction(bool showIf, Widget userActions) => Container(
+    child: showIf
+        ? userActions
+        : null
+  );
 
   Widget helpMessage(String message, bool showIf) => Container(
     child: showIf ? Align(

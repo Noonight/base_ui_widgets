@@ -19,7 +19,11 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark
       ),
       theme: ThemeData(
-          brightness: Brightness.light
+          brightness: Brightness.light,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.black
+          )
       ),
       home: const HomePage(),
       routes: <String, WidgetBuilder> {
