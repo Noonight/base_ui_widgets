@@ -12,9 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Base UI Widgets',
+      themeMode: ThemeMode.system,
+      darkTheme: ThemeData(
+        brightness: Brightness.dark
+      ),
       theme: ThemeData(
-        colorScheme: const ColorScheme.dark()
+          brightness: Brightness.light
       ),
       home: const HomePage(),
       routes: <String, WidgetBuilder> {

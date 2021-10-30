@@ -45,11 +45,11 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget listItem(BuildContext context, PageModel model) => Card(
-    elevation: 5,
-    child: Padding(
-      padding: const EdgeInsets.fromLTRB(10, 15, 10, 15),
-      child: GestureDetector(
+  Widget listItem(BuildContext context, PageModel model) => GestureDetector(
+    child: Card(
+      elevation: 5,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(15, 15, 10, 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -68,11 +68,11 @@ class HomePage extends StatelessWidget {
             )
           ],
         ),
-        onTap: () {
-          Navigator.of(context).pushNamed(model.route);
-        },
       ),
     ),
+    onTap: () {
+      Navigator.of(context).pushNamed(model.route);
+    },
   );
 
   Future<void> _showHelpDialog(BuildContext context) => showDialog(context: context, builder: (BuildContext context) {

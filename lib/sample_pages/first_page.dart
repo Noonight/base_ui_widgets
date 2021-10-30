@@ -5,10 +5,37 @@ class FirstPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FittedBox(
-      fit: BoxFit.cover,
-      child: Container(
-        color: Colors.grey,
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(
+          children: [
+            Container(
+              color: Colors.white,
+            ),
+            Center(
+              widthFactor: double.infinity,
+                child: Text('First Page', style: Theme.of(context).textTheme.headline2)
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                margin: const EdgeInsets.only(bottom: 15),
+                child: GestureDetector(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Back', style: Theme.of(context).textTheme.headline4),
+                      const Icon(Icons.subdirectory_arrow_left),
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ),
+            ),
+          ]
+        ),
       ),
     );
   }
