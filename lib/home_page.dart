@@ -14,7 +14,8 @@ class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   static List pages = [
-    PageModel('First page', 'Noting on the first page', '/sample-pages/first-page')
+    PageModel('First page', 'Noting on the first page', '/sample-pages/first-page'),
+    PageModel('Text themes', 'Text with default themes', '/sample-pages/text-theme-page')
   ];
 
   @override
