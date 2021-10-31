@@ -1,4 +1,5 @@
 import 'package:base_ui_widgets/home_page.dart';
+import 'package:base_ui_widgets/sample_pages/buttons_page.dart';
 import 'package:base_ui_widgets/sample_pages/first_page.dart';
 import 'package:base_ui_widgets/sample_pages/text_theme_page.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder> {
         '/sample-pages/first-page' : (BuildContext context) => const FirstPage(),
         '/sample-pages/text-theme-page' : (BuildContext context) => const TextThemePage(),
+        '/sample-pages/buttons-page' : (BuildContext context) => const ButtonsPage()
       },
     );
   }

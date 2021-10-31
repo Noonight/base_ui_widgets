@@ -10,7 +10,7 @@ class FirstPage extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              color: Colors.white,
+              color: Colors.grey,
             ),
             Center(
               widthFactor: double.infinity,

@@ -15,7 +15,8 @@ class HomePage extends StatelessWidget {
 
   static List pages = [
     PageModel('First page', 'Noting on the first page', '/sample-pages/first-page'),
-    PageModel('Text themes', 'Text with default themes', '/sample-pages/text-theme-page')
+    PageModel('Text themes', 'Text with default themes', '/sample-pages/text-theme-page'),
+    PageModel('Buttons', 'Buttons with some configuration', '/sample-pages/buttons-page')
   ];
 
   @override
